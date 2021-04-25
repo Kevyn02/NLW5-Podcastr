@@ -46,6 +46,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   height={192}
                   src={episode.thumbnail}
                   alt={episode.title}
+                  title={episode.title}
                   objectFit="cover"
                 />
                 <div className={styles.episodeDetails}>
@@ -59,6 +60,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                 <button
                   type="button"
                   onClick={() => playList(episodeList, index)}
+                  title="Tocar episódio"
                 >
                   <img src="/play-green.svg" alt="Tocar episódio" />
                 </button>
@@ -90,6 +92,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                       height={120}
                       src={episode.thumbnail}
                       alt={episode.title}
+                      title={episode.title}
                       objectFit="cover"
                     />
                   </td>
@@ -107,6 +110,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                       onClick={() =>
                         playList(episodeList, index + latestEpisodes.length)
                       }
+                      title="Tocar episódio"
                     >
                       <img src="./play-green.svg" alt="Tocar episódio" />
                     </button>
